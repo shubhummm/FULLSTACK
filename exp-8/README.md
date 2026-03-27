@@ -67,19 +67,24 @@ This experiment demonstrates the development of a RESTful API using Spring Boot.
 ## Screenshots
 
 ### GET Request
-![GET Screenshot](get.png)
+![GET Screenshot](<img width="843" height="685" alt="Screenshot 2026-03-27 at 3 42 37 PM" src="https://github.com/user-attachments/assets/a43cd75d-b3c4-4d80-9153-89eb928a6c29" />
+)
 *Screenshot showing the GET request to retrieve all students.*
 
 ### POST Request
-![POST Screenshot](post.png)
+![POST Screenshot](<img width="845" height="639" alt="Screenshot 2026-03-27 at 3 45 19 PM" src="https://github.com/user-attachments/assets/2312a8fe-80c4-4e1c-9dfb-fd8e65b94f74" />
+)
 *Screenshot showing the POST request to add a new student.*
 
 ### PUT Request
-![PUT Screenshot](put.png)
+![PUT Screenshot](<img width="846" height="675" alt="Screenshot 2026-03-27 at 3 43 18 PM" src="https://github.com/user-attachments/assets/f19cbaa6-226a-4534-8b82-7e732a0733e3" />
+)
 *Screenshot showing the PUT request to update a student.*
 
 ### DELETE Request
-![DELETE Screenshot](delete.png)
+![DELETE Screenshot](<img width="854" height="261" alt="Screenshot 2026-03-27 at 3 43 43 PM" src="https://github.com/user-attachments/assets/aa36deb8-0065-4494-9495-b616d35508db" />
+<img width="833" height="664" alt="Screenshot 2026-03-27 at 3 43 58 PM" src="https://github.com/user-attachments/assets/0f7779e2-4d55-4a61-aebd-320098ffb15b" />
+)
 *Screenshot showing the DELETE request to remove a student.*
 
 ## Student Model
@@ -100,7 +105,3 @@ In this experiment, we learned:
 - Structuring a layered architecture (Controller, Service, Repository)
 - Handling HTTP requests and responses in JSON format
 
-## Notes
-- The application uses Hibernate DDL auto-update, so tables are created automatically.
-- SQL queries are logged to the console for debugging purposes.
-- This is a basic implementation; in a production environment, consider adding validation, error handling, and security features.
