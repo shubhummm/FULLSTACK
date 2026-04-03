@@ -1,8 +1,8 @@
-package repository;
+package com.AML2B.Rest_API;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import com.AML2B.Rest_API.model.Student;
 
-import model.Student;
+public interface StudentRepository extends JpaRepository<Student, Integer> {
 
-public interface StudentRepository extends JpaRepository<Student,Integer>{
 }
