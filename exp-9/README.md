@@ -1,121 +1,163 @@
-# 🔐 Spring Security + JWT Authentication Demo
+# 🔐 JWT Authentication System with Spring Security
 
-This project demonstrates how to implement authentication and authorization using Spring Security and JSON Web Tokens (JWT) in a RESTful API.
+  
 
-It showcases how users can securely log in and access protected resources by passing a Bearer Token in the Authorization header.
+This project is a simple backend system that demonstrates how authentication works using **Spring Security + JWT (JSON Web Tokens)**.
 
----
+  
 
-## 🚀 Features
+Instead of relying on sessions, it uses a **stateless approach**, where users authenticate once and then use a token to access protected APIs.
 
-- User Authentication using Email & Password
-- JWT Token Generation on Login
-- Stateless Session Management
-- Secure REST APIs using Spring Security
-- Role-based Authorization (optional extension)
-- MySQL / PostgreSQL Database Integration
-- Password Encryption using BCrypt
+* * *
 
----
+## ⚙️ What this project does
 
-## 🛠️ Tech Stack
+*   Lets users **register and log in**
+    
+*   Generates a **JWT token** after successful login
+    
+*   Secures endpoints so only authenticated users can access them
+    
+*   Validates every request using a **custom JWT filter**
+    
+*   Stores user data in a relational database
+    
 
-- Java 17+
-- Spring Boot
-- Spring Security
-- JWT (JSON Web Token)
-- Hibernate / JPA
-- MySQL / PostgreSQL
-- Maven
+* * *
 
----
+## 🧰 Tech Used
 
-## 📁 Project Structure
+*   Java
+    
+*   Spring Boot
+    
+*   Spring Security
+    
+*   JWT (jjwt library)
+    
+*   Hibernate (JPA)
+    
+*   MySQL
+    
+*   Maven
+    
 
-com.agam.rest_example
-│
-├── Controller
-├── Service
-├── Repository
-├── Entity
-├── Security
-└── Config
+* * *
 
----
+## 🧱 Project Layout
 
-## 🔑 Authentication Flow
+  
 
-1. User sends login request with credentials
-2. Server validates user using Spring Security
-3. JWT token is generated
-4. Token is returned to client
-5. Client sends token in Authorization header for protected APIs
-6. Server validates token before granting access
+The project follows a layered structure:
 
----
+    Controller → handles requests
+    Service → contains business logic
+    Repository → interacts with database
+    Entity → defines database models
+    Config → security configuration
+    Filter → JWT validation logic
 
-## 📌 API Endpoints
+* * *
 
-### 🔓 Public Endpoints
+## 🔄 How authentication works (simple view)
 
-POST /register
+1.  User sends credentials to /login
+    
+2.  Server verifies username + password
+    
+3.  If valid → JWT token is generated
+    
+4.  Token is sent back to the user
+    
+5.  User includes token in future requests:
+    
 
-POST /login
+    Authorization: Bearer <token>
 
+5.    
+    
+6.  Server validates token before allowing access
+    
 
----
+* * *
 
-### 🔒 Protected Endpoints
+## 📡 API Endpoints
 
-GET /api/students/{id}
+  
 
-Headers:
-Authorization: Bearer <your_jwt_token>
+### Public routes
 
----
+    POST /register
+    POST /login
 
-## 🧪 Testing with Postman
+* * *
 
-1. Login using /api/auth/login
-2. Copy token
-3. Use it in Authorization header for protected APIs
+### Protected routes
 
----
+    GET /students
 
-## 🔐 Security Configuration
+👉 Requires:
 
-- CSRF disabled
-- Stateless session
-- JWT filter added before UsernamePasswordAuthenticationFilter
-- BCrypt password encoding
+    Authorization: Bearer <your_token>
 
----
-## Screenshots
+* * *
 
-<img width="1440" height="900" alt="Screenshot 2026-04-02 at 9 28 38 AM" src="https://github.com/user-attachments/assets/9a591bce-844e-4d20-a8b1-5dc686fb56dc" />
+## 🔐 Security Setup
 
-<img width="1440" height="900" alt="Screenshot 2026-04-02 at 9 29 52 AM" src="https://github.com/user-attachments/assets/7e31db44-9b87-45cd-b59b-329b2cab8a55" />
+*   Passwords are encrypted using **BCrypt**
+    
+*   No sessions are stored (stateless system)
+    
+*   Custom **JWT filter** runs before authentication
+    
+*   Only authorized requests can hit protected APIs
+    
 
-<img width="1440" height="900" alt="Screenshot 2026-04-02 at 9 30 25 AM" src="https://github.com/user-attachments/assets/ed62eb06-0239-4c4c-8cd7-565842badeb3" />
+* * *
 
+## 🧪 Testing (Postman flow)
 
+1.  Register a user
+    
+2.  Login → get JWT token
+    
+3.  Copy token
+    
+4.  Add it to headers:
+    
 
-<img width="1440" height="900" alt="Screenshot 2026-04-02 at 9 31 04 AM" src="https://github.com/user-attachments/assets/f5fa98bf-3707-4ade-be16-c3ba77efc7ba" />
+    Authorization: Bearer <token>
 
+4.    
+    
+5.  Hit protected endpoints
+    
 
+* * *
 
+## ▶️ Running the project
 
+    git clone <your-repo-link>
+    cd exp-9
+    mvn spring-boot:run
 
----
+* * *
 
-## ▶️ How to Run
+## 📸 Screenshots
 
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-mvn spring-boot:run
+  
 
----
+(Add your screenshots here)
 
-## 👨‍💻 Author
+* * *
 
-Agampal Singh
+## 🧠 What I learned from this
+
+*   How Spring Security actually works under the hood
+    
+*   Difference between session-based vs token-based auth
+    
+*   How JWT is created, signed, and validated
+    
+*   How to secure APIs properly
+    
