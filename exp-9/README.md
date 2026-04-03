@@ -145,9 +145,12 @@ The project follows a layered structure:
 
 ## 📸 Screenshots
 
-  
+  <img width="1367" height="799" alt="terminal" src="https://github.com/user-attachments/assets/6709cc15-fd86-442b-be45-cfae7f26762d" />
+<img width="1277" height="797" alt="register" src="https://github.com/user-attachments/assets/c01c5029-0d8f-4485-b298-3801d4b94dc0" />
+<img width="1281" height="802" alt="login" src="https://github.com/user-attachments/assets/99bb7d01-be83-40a4-a5fd-c29f50cc40dc" />
+<img width="1276" height="798" alt="students" src="https://github.com/user-attachments/assets/10f477a6-b2af-45a0-926c-1e01e8ca7c98" />
 
-(Add your screenshots here)
+
 
 * * *
 
