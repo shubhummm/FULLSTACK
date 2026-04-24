@@ -3,22 +3,25 @@
 ---
 
 ## 📌 Overview
-A full-stack real-time chat application using WebSocket for continuous communication between client and server.  
-Built with **Spring Boot (backend)** and **React (frontend)**.
+
+This project is a full-stack real-time chat application developed using **Spring Boot** for the backend and **React + Vite** for the frontend. It uses **WebSocket** technology to enable instant two-way communication between client and server without page refresh.
 
 ---
 
 ## 🎯 Objectives
-- Enable real-time messaging without HTTP polling  
-- Support multiple users with instant message broadcasting  
-- Build a responsive UI using React  
+
+- Implement real-time messaging using WebSocket  
+- Allow multiple users to chat simultaneously  
+- Broadcast messages instantly to all connected clients  
+- Build an interactive frontend using React  
 - Integrate frontend and backend using STOMP protocol  
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
 ### 🔹 Backend
+
 - Java  
 - Spring Boot  
 - WebSocket  
@@ -27,43 +30,36 @@ Built with **Spring Boot (backend)** and **React (frontend)**.
 - Maven  
 
 ### 🔹 Frontend
+
 - React  
 - Vite  
+- JavaScript  
 - STOMP.js  
-- SockJS  
+- SockJS-client  
 
 ---
 
 ## ✨ Features
-- 💬 Real-time text messaging  
-- 🖼️ Image sharing support  
-- 🎤 Voice message support  
-- ⚡ Live UI updates without refresh  
-- 🔌 WebSocket endpoint (`/ws`)  
+
+- 💬 Real-time text chat  
+- ⚡ Instant message updates without reload  
+- 👥 Multi-user communication  
+- 🔌 WebSocket endpoint connection (`/ws`)  
 - 🔁 Message routing using `/app` and `/topic`  
-- 🔒 Handles connection, disconnection, and errors  
+- 📡 Live server-client communication  
+- 🔒 Connection and disconnection handling  
+- 🎨 Responsive user interface  
 
 ---
+
+<img width="1424" height="296" alt="Screenshot 2026-04-24 at 10 09 29 AM" src="https://github.com/user-attachments/assets/425b6509-8dee-4e56-9b70-70ef17230ef6" />
 
 ## 📁 Project Structure
 
----
-
-## ⚙️ Working
-- Client connects to server via WebSocket  
-- Messages are sent using STOMP protocol  
-- Server processes and broadcasts messages  
-- All connected users receive messages instantly  
-
----
-
-## 🚀 How to Run
-
-### 🔹 Backend
 ```bash
-cd backend
-.\mvnw.cmd spring-boot:run
+exp-10/
+│── demo_websocket/      # Spring Boot Backend
+│── app/frontend/        # React Frontend
 
-cd frontend
-npm install
-npm run dev
+
+
